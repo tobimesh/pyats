@@ -1,0 +1,29 @@
+devices:
+  RTR01:
+    connections:
+      cli:
+        ip: 10.10.10.1
+        protocol: telnet
+    credentials:
+      default:
+        password: cisco123
+        username: ansible
+      enable:
+        password: cisco123
+    os: ios
+    platform: cisco_ios
+    type: ios
+  RTR02:
+    connections:
+      cli:
+        ip: 10.10.10.2
+        protocol: telnet
+    credentials:
+      default:
+        password: cisco124
+        username: ansible
+      enable:
+        password: cisco123
+    os: ios
+    platform: cisco_ios
+    type: ios

@@ -1,0 +1,27 @@
+devices:
+ RTR01:
+     type: 'router'
+     os: 'ios'
+     platform: ios
+     alias: 'mesh1'
+     credentials:
+         default:
+             username: ansible
+             password: cisco123
+     connections:
+         cli:
+             protocol: ssh
+             ip: "10.10.10.1"
+ RTR02:
+   type: 'router'
+   os: 'ios'
+   platform: ios
+   alias: 'mesh2'
+   credentials:
+     default:
+       username: ansible
+       password: cisco123
+   connections:
+     cli:
+       protocol: ssh
+       ip: "10.10.10.2"
