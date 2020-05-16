@@ -1,0 +1,18 @@
+
+ command: Create testbed file
+(pyats) $  pyats create testbed my_devices.xls --output yaml/my_testbed.yaml
+(pyats) $ pyats create testbed --output yaml/my_testbed.yaml --encode-password
+(pyats) $ pyats validate testbed [file]
+
+dependencies: 
+pip install xlrd xlwt xlsxwriter
+
+option2
+genie create testbed --output "yaml/testbed.yaml" --endode-password
+
+sample and compare output after change:
+genie parse "show ip interface brief" --testbed-file yaml/sample.yaml --output demo1
+genie parse "show ip interface brief" --testbed-file yaml/sample.yaml --output demo2
+genie diff demo1 demo2
+  
+genie learn config --testbed-file yaml/sample.yaml --output gold_config
